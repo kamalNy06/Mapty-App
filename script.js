@@ -37,6 +37,6 @@ navigator.geolocation.getCurrentPosition(
     });
   },
   function () {
-    alert("Cound not get your location");
+    alert("Cound not get your location.");
   }
 );
