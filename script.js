@@ -30,7 +30,11 @@ navigator.geolocation.getCurrentPosition(
       .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
       .openPopup();
 
-    map.on("click", function (mapEvent) {});
+    map.on("click", function (mapEvent) {
+      const { lat, lng } = mapEvent.latlng;
+      const coords = [lat, lng];
+      L.marker(coords).addTo(map).bindPopup("Workout").openPopup();
+    });
   },
   function () {
     alert("Cound not get your location");
